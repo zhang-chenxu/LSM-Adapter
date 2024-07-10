@@ -12,6 +12,10 @@ Suqi Song<sup>1†</sup>, Chenxu Zhang<sup>1†</sup>, Peng Zhang<sup>1</sup>, P
 <sup>*</sup> Corresponding author
 </div>
 
+<div>
+  leizhang@cqu.edu.cn
+</div>
+
 ## Abstract
 
 Urban waterlogging poses a major risk to public safety and infrastructure. Conventional methods using water-level sensors need high-maintenance to hardly achieve full coverage. Recent advances employ surveillance camera imagery and deep learning for detection, yet these struggle amidst scarce data and adverse environmental conditions. In this paper, we establish a challenging Urban Waterlogging Benchmark (UW-Bench) under diverse adverse conditions to advance real-world applications. We propose a Large-Small Model co-adapter paradigm (LSM-adapter), which harnesses the substantial generic segmentation potential of large model and the specific task-directed guidance of small model. Specifically, a Triple-S Prompt Adapter module alongside a Dynamic Prompt Combiner are proposed to generate then merge multiple prompts for mask decoder adaptation. Meanwhile, a Histogram Equalization Adap-ter module is designed to infuse the image specific information for image encoder adaptation. Results and analysis show the challenge and superiority of our developed benchmark and algorithm.
@@ -59,9 +63,9 @@ Urban waterlogging poses a major risk to public safety and infrastructure. Conve
 <p>
   Training and testing examples in the developed UW-Bench. For objectively evaluating the capability of the model 
   in real-world applications, we consider both <i>general-sample</i> and <i>hard-sample</i> cases in test set. The 
-  training set is collected and labeled by Chongqing University, and the ownership belongs to Chongqing University. 
-  The test set is provided by Huawei, and the ownership belongs to Huawei. If you need the training data, please 
-  contact us at the following email address: 123@.com.
+  training set is collected and labeled by LiVE Group of Chongqing University, and the ownership belongs to Chongqing 
+  University. The test set is provided by Huawei, and the ownership belongs to Huawei. If you need training data, 
+  please feel free to contact us.
 </p>
 </div>
 
