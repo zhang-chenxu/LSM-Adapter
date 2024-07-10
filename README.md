@@ -1,127 +1,78 @@
 <div align="center">
 <h1>Urban Waterlogging Detection: A Challenging Benchmark and Large-Small Model Co-Adapter [ECCV2024]</h1>
 
-[Suqi Song]<sup>1†</sup>,[Chenxu Zhang]<sup>1†</sup>,[Peng Zhang]<sup>1</sup>, [Pengkun Li]<sup>2</sup>, [Fenglong Song]<sup>3</sup>, [Lei Zhang]<sup>1*</sup>
+Suqi Song<sup>1†</sup>, Chenxu Zhang<sup>1†</sup>, Peng Zhang<sup>1</sup>, Pengkun Li<sup>2</sup>, Fenglong Song<sup>3</sup>, Lei Zhang<sup>1*</sup>
 
-[Chongqing University]<sup>1</sup>
-[Huawei Technologies Co., Ltd.]<sup>2</sup>
-[Huawei Noah's Ark Lab]<sup>3</sup>
+<sup>1</sup>Chongqing University,
+<sup>2</sup>Huawei Applnnovate Lab,
+<sup>3</sup>Huawei Noah's Ark Lab
 
+<div>
+<sup>†</sup> Equal contribution
+<sup>*</sup> Corresponding author
+</div>
 
 ## Abstract
 
 Urban waterlogging poses a major risk to public safety and infrastructure. Conventional methods using water-level sensors need high-maintenance to hardly achieve full coverage. Recent advances employ surveillance camera imagery and deep learning for detection, yet these struggle amidst scarce data and adverse environmental conditions. In this paper, we establish a challenging Urban Waterlogging Benchmark (UW-Bench) under diverse adverse conditions to advance real-world applications. We propose a Large-Small Model co-adapter paradigm (LSM-adapter), which harnesses the substantial generic segmentation potential of large model and the specific task-directed guidance of small model. Specifically, a Triple-S Prompt Adapter module alongside a Dynamic Prompt Combiner are proposed to generate then merge multiple prompts for mask decoder adaptation. Meanwhile, a Histogram Equalization Adap-ter module is designed to infuse the image specific information for image encoder adaptation. Results and analysis show the challenge and superiority of our developed benchmark and algorithm.
 ## Overview
 
-* [**Dual-SAM**] is a novel learning framework for high performance Marine Animal Segmentation (MAS). The framework inherits the ability of SAM and adaptively incorporate prior knowledge of underwater scenarios.
+* We propose an innovative large-small model co-adapter paradigm (LSM-adapter), aiming at achieving win-win regime. In order to learn a robust prompter, a Triple-S prompt adapter (TSP-Adapt) with a dynamic prompt combiner is formulated, enabling a success on adaptation. We pioneer the use of vision foundation model i.e., SAM for urban waterlogging detection, providing new insights for future research.
 
-<p align="center">
-  <img src="github_show/framework.png" alt="accuracy" width="80%">
-</p>
-
-* **Motivation of Our proposed Mehtod**
-
-<p align="center">
-  <img src="github_show/motivation.png" alt="arch" width="60%">
-</p>
-
-* **Multi-level Coupled Prompt**
-
-<p align="center">
-  <img src="github_show/MCP.png" alt="arch" width="60%">
-</p>
-
-* **Criss-Cross Connectivity Prediction**
-
-<p align="center">
-  <img src="github_show/c3p.png" alt="arch" width="60%">
-</p>
-
-* **Dilated Fusion Attention Module**
-
-<p align="center">
-  <img src="github_show/dfam.png" alt="arch" width="60%">
-</p>
-
-
-## Main Results
-
-We rely on five public datasets and five evaluation metrics to thoroughly validate our model’s performance.
-<p align="center">
-  <img src="github_show/res1.png" alt="arch" width="60%">
-</p>
-
-<p align="center">
-  <img src="github_show/res2.png" alt="arch" width="60%">
-</p>
-
-
-
-## Getting Started
-
+<div align="center">
+  <img src="pictures/framework.jpg">
 </div>
+<p>
+  The proposed Large-Small Model Co-adapter Paradigm, which include a histogram equalization adapter, 
+  a triple-S prompt adapter and a dynamic prompt combiner. All components except the image encoder of 
+  SAM are trained for prompt generation, learning and adaptation, toward adverse waterlogging detection.
+</p>
 
-### Installation
+* **Details of the proposed HE-Adapt and Semantic Prompter**
 
-**step1:Clone the Dual_SAM repository:**
+<div align="center">
+  <img src="pictures/HE-SemP.jpg">
+</div>
+<p>
+  The proposed histogram equalization adapter module mainly consists of a histogram equalization, a high-frequency filter and MLP blocks.
+  Given that the features of water are not pronounced in most challenging scenarios, we first conduct histogram equalization operation to 
+  highlight the contrast and texture of input image. %which can enhance the  of water, and make the boundaries more distinct. The enhanced 
+  image is then passed through a high-frequency filter to extract high-frequency information beneficial for segmentation, and converted into 
+  frequency patch embedding. The image embedding of large model contains rich semantic information. Therefore, we propose a prototype learning-based 
+  semantic prompter, which leverages useful foreground features from large model to generate semantic prompts.
+</p>
 
-To get started, first clone the Dual_SAM repository and navigate to the project directory:
+* **One-stage and Two-stage training strategies**
 
-```bash
-git clone https://github.com/Drchip61/Dual_SAM.git
-cd Dual_SAM
+<div align="center">
+  <img src="pictures/training.jpg">
+</div>
+<p>
+  Two training strategies are proposed to explore suitable joint training of models with diverse architectures.
+</p>
 
-```
+* **UW-Bench Dataset**
 
-**step2:Environment Setup:**
-
-Dual_SAM recommends setting up a conda environment and installing dependencies via pip. Use the following commands to set up your environment:
-#### Create and activate a new conda environment
-
-```bash
-conda create -n Dual_SAM
-conda activate Dual_SAM
-```
-#### Install Dependencies.
-```bash
-pip install -r requirements.txt
-```
-
-#### Download pretrained model.
-Please put the pretrained [SAM model](https://drive.google.com/file/d/1_oCdoEEu3mNhRfFxeWyRerOKt8OEUvcg/view?usp=share_link) in the Dual-SAM file.
-
-### Model Training and Testing
-
-**Training**
-```bash
-# Change the hyper parameter in the train_s.py 
-python train_s.py
-```
-
-**Testing**
-```bash
-# Change the hyper parameter in the test_y.py 
-python test_y.py
-```
-
-### Analysis Tools
-
-
-```bash
-# First threshold the prediction mask
-python bimap.py
-# Then evaluate the perdiction mask
-python test_score.py
-```
+<div align="center">
+  <img src="pictures/dataset.jpg">
+</div>
+<p>
+  Training and testing examples in the developed UW-Bench. For objectively evaluating the capability of the model 
+  in real-world applications, we consider both <i>general-sample</i> and <i>hard-sample</i> cases in test set. The 
+  training set is collected and labeled by Chongqing University, and the ownership belongs to Chongqing University. 
+  The test set is provided by Huawei, and the ownership belongs to Huawei. If you need the training data, please 
+  contact us at the following email address: 123@.com.
+</p>
+</div>
 
 ## Citation
 
 ```
 @inproceedings{
-anonymous2024fantastic,
-title={Fantastic Animals and Where to Find Them: Segment Any Marine Animal with Dual {SAM}},
-author={Pingping Zhang，Tianyu Yan， Yang Liu，Huchuan Lu},
-booktitle={Conference on Computer Vision and Pattern Recognition 2024},
-year={2024}
+song2024lsmadapter,
+title={Urban Waterlogging Detection: A Challenging Benchmark and Large-Small Model Co-Adapter},
+author={Suqi Song and Chenxu Zhang and Peng Zhang and Pengkun Li and Fenglong Song and Lei Zhang},
+journal = {ECCV},
+issue_date = {2024}
 }
 ```
