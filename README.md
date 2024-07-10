@@ -13,7 +13,7 @@ Suqi Song<sup>1†</sup>, Chenxu Zhang<sup>1†</sup>, Peng Zhang<sup>1</sup>, P
 </div>
 
 <div>
-  {songsuqi, pengzhang}@stu.cqu.edu.cn, {zhangchenxu, leizhang}@cqu.edu.cn, 
+  {songsuqi, pengzhang}@stu.cqu.edu.cn, {zhangchenxu, leizhang}@cqu.edu.cn, {lipengkun3, songfenglong}@huawei.com
 </div>
 
 ## Abstract
@@ -22,6 +22,7 @@ Urban waterlogging poses a major risk to public safety and infrastructure. Conve
 <div align="center">
   <img src="pictures/fig1_bluemask_0307v2.jpg">
 </div>
+
 ## Overview
 
 * We propose an innovative large-small model co-adapter paradigm (LSM-adapter), aiming at achieving win-win regime. In order to learn a robust prompter, a Triple-S prompt adapter (TSP-Adapt) with a dynamic prompt combiner is formulated, enabling a success on adaptation. We pioneer the use of vision foundation model i.e., SAM for urban waterlogging detection, providing new insights for future research.
