@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Urban Waterlogging Detection: A Challenging Benchmark and Large-Small Model Co-Adapter [ECCV2024]</h1>
+<h1>Urban Waterlogging Detection: A Challenging Benchmark and Large-Small Model Co-Adapter [ECCV 2024]</h1>
 
 Suqi Song<sup>1†</sup>, Chenxu Zhang<sup>1†</sup>, Peng Zhang<sup>1</sup>, Pengkun Li<sup>2</sup>, Fenglong Song<sup>3</sup>, Lei Zhang<sup>1*</sup>
 
