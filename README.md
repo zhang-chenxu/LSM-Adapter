@@ -4,7 +4,7 @@
 Suqi Song<sup>1†</sup>, Chenxu Zhang<sup>1†</sup>, Peng Zhang<sup>1</sup>, Pengkun Li<sup>2</sup>, Fenglong Song<sup>3</sup>, Lei Zhang<sup>1*</sup>
 
 <sup>1</sup>Chongqing University,
-<sup>2</sup>Huawei Applnnovate Lab,
+<sup>2</sup>Huawei Technologies Co., Ltd.,
 <sup>3</sup>Huawei Noah's Ark Lab
 
 <div>
