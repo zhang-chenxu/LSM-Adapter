@@ -62,12 +62,12 @@ Urban waterlogging poses a major risk to public safety and infrastructure. Conve
 </div>
 <p>
   Training and testing examples in the developed UW-Bench. For objectively evaluating the capability of the model 
-  in real-world applications, we consider both <i>general-sample</i> and <i>hard-sample</i> cases in test set. The 
-  training set is collected and labeled by LiVE Group of Chongqing University, and the ownership belongs to LiVE Group. 
-  The test set is provided by Huawei, and the ownership belongs to Huawei. If you need training data, please feel 
-  free to contact us.
+  in real-world applications, we consider both <i>general-sample</i> and <i>hard-sample</i> cases in test set.
 </p>
+
 </div>
+
+## * <b>Please note that</b> the training set was collected and labeled by LiVE group of Chongqing University, and the ownership belongs to LiVE group, and the test set was provided by Huawei, and the ownership belongs to Huawei. If you need the training set, please feel free to contact us.
 
 ## Citation
 
