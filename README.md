@@ -13,12 +13,15 @@ Suqi Song<sup>1†</sup>, Chenxu Zhang<sup>1†</sup>, Peng Zhang<sup>1</sup>, P
 </div>
 
 <div>
-  leizhang@cqu.edu.cn
+  {songsuqi, pengzhang}@stu.cqu.edu.cn, {zhangchenxu, leizhang}@cqu.edu.cn, 
 </div>
 
 ## Abstract
 
 Urban waterlogging poses a major risk to public safety and infrastructure. Conventional methods using water-level sensors need high-maintenance to hardly achieve full coverage. Recent advances employ surveillance camera imagery and deep learning for detection, yet these struggle amidst scarce data and adverse environmental conditions. In this paper, we establish a challenging Urban Waterlogging Benchmark (UW-Bench) under diverse adverse conditions to advance real-world applications. We propose a Large-Small Model co-adapter paradigm (LSM-adapter), which harnesses the substantial generic segmentation potential of large model and the specific task-directed guidance of small model. Specifically, a Triple-S Prompt Adapter module alongside a Dynamic Prompt Combiner are proposed to generate then merge multiple prompts for mask decoder adaptation. Meanwhile, a Histogram Equalization Adap-ter module is designed to infuse the image specific information for image encoder adaptation. Results and analysis show the challenge and superiority of our developed benchmark and algorithm.
+<div align="center">
+  <img src="pictures/fig1_bluemask_0307v2.jpg">
+</div>
 ## Overview
 
 * We propose an innovative large-small model co-adapter paradigm (LSM-adapter), aiming at achieving win-win regime. In order to learn a robust prompter, a Triple-S prompt adapter (TSP-Adapt) with a dynamic prompt combiner is formulated, enabling a success on adaptation. We pioneer the use of vision foundation model i.e., SAM for urban waterlogging detection, providing new insights for future research.
