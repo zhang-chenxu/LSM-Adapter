@@ -59,7 +59,7 @@ Urban waterlogging poses a major risk to public safety and infrastructure. Conve
   Two training strategies are proposed to explore suitable joint training of models with diverse architectures.
 </p>
 
-* **UW-Bench Dataset**
+## UW-Bench Dataset
 
 <div align="center">
   <img src="pictures/dataset.jpg">
@@ -71,7 +71,9 @@ Urban waterlogging poses a major risk to public safety and infrastructure. Conve
 
 </div>
 
-## * <b>Please note that</b> the training set was collected and labeled by LiVE group of Chongqing University and the test set was provided by Huawei. If you need the training set, please feel free to contact us.
+* The training set is available in [BaiduPan](https://pan.baidu.com/s/1dPGRJrzRt1nBDlMdK8LiBQ?pwd=ey8b).
+* Please note that</b> the training set was collected and labeled by LiVE group of Chongqing University and the test set was provided by Huawei.
+
 
 ## Citation
 
