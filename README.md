@@ -72,7 +72,7 @@ Urban waterlogging poses a major risk to public safety and infrastructure. Conve
 </div>
 
 * Please note that</b> the training set ([Baidu Drive](https://pan.baidu.com/s/1dPGRJrzRt1nBDlMdK8LiBQ?pwd=ey8b) | [Google Drive](https://drive.google.com/file/d/1R6Q7XqLHmBmh_hMtTAE3TNRrK9vI3HP7/view?usp=drive_link)) was collected and labeled by LiVE group of Chongqing University and the test set was provided by Huawei.
-* Dataset Password: Sign the [Dataset Access Agreement](https://pan.baidu.com/s/1dPGRJrzRt1nBDlMdK8LiBQ?pwd=ey8b) and send it to one of the following e-mail addresses for a password. (songsuqi@stu.cqu.edu.cn/zhangchenxu@cqu.edu.cn/leizhang@cqu.edu.cn)
+* Dataset Password: Sign the [Dataset Access Agreement](https://github.com/zhang-chenxu/LSM-Adapter/blob/f32327f15ea1e626091f8dd37b0e5ee310997e57/Dataset%20Access%20Agreement.pdf) and send it to one of the following e-mail addresses for a password. (songsuqi@stu.cqu.edu.cn/zhangchenxu@cqu.edu.cn/leizhang@cqu.edu.cn)
 
 
 ## Citation
